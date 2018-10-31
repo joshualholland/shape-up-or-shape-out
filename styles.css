@@ -3,14 +3,16 @@
     width: 600px;
     background-color: lightgrey;
     margin: 10px;
+    position: relative;
 }
 
 #sidepanel {
-    background-color: lightgreen;
+    background-color: #eead90;
     right: 0;
-    position: fixed;
-    height: 300px;
-    width: 300px;
+    top: 140px;
+    position: absolute;
+    height: 600px;
+    width: 50%;
 }
 
 #CircleShape {
@@ -22,4 +24,16 @@
     width: 0;
     border-bottom: solid yellow;
     border-right: solid transparent;
+}
+
+p {
+    font-size: x-large;
+    font-family: serif;
+    font-style: italic;
+    padding-left: 10px;
+    margin: 55px;
+}
+
+body {
+    background-color: darkslategray;
 }

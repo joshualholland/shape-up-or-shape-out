@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Shape up or shape out</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div id="form">
         <input type="number" id="rectW" placeholder="Width">
         <input type="number" id="rectH" placeholder="Height">
-        <button id="addRect">Rectangle</button>
+        <button id="addRect" class="btn btn-outline-secondary btn-sm">Rectangle</button>
     </div>
     <div id="form">
         <input type="number" id="SquareSL" placeholder="Side Length">
-        <button id="addSquare">Square</button>
+        <button id="addSquare" class="btn btn-outline-secondary btn-sm">Square</button>
     </div>
     <div id="form">
         <input type="number" id="circleR" placeholder="Radius">
-        <button id="addCircle">Circle</button>
+        <button id="addCircle" class="btn btn-outline-secondary btn-sm">Circle</button>
     </div>
     <div id="form">
         <input type="number" id="triHeight" placeholder="Height">
-        <button id="triangle">Right Triangle</button>
+        <button id="triangle" class="btn btn-outline-secondary btn-sm">Right Triangle</button>
     </div>
     <div id="shapeCont">
 
@@ -39,4 +43,5 @@
     </div>
     <script src="scripts.js"></script>
 </body>
+
 </html>

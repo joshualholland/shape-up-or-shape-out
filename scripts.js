@@ -2,14 +2,20 @@ class Shape {
     constructor(width, height) {
         this.width = width;
         this.height = height;
-        this.radius = this.height /2;
+        this.radius = this.height / 2;
         this.name = name;
         this.div = document.createElement('div');
         this.div.style.width = this.width + 'px';
         this.div.style.height = this.height + 'px';
+        this.div.style.top = Math.floor(Math.random() * (600 - height)) + 'px';
+        this.div.style.left = Math.floor(Math.random() * (600 - width)) + 'px';
+        this.div.style.position = 'absolute';
         document.getElementById('shapeCont').appendChild(this.div);
         this.div.addEventListener('click', () => {
             this.describe();
+        });
+        this.div.addEventListener('dblclick', () => {
+            this.div.remove();
         })
     }
 
@@ -18,15 +24,9 @@ class Shape {
         document.getElementById('width').textContent = 'Width: ' + this.width;
         document.getElementById('height').textContent = 'Height: ' + this.height;
         document.getElementById('radius').textContent = 'Radius: ' + this.radius;
-        document.getElementById('area').textContent = 'Area: ' + this.area();
-        document.getElementById('perimeter').textContent = 'Perimeter: ' + this.perimeter();
-        
-    }
-    area() {
-        return this.height * this.width;
-    }
-    perimeter() {
-        return (this.height + this.width) *2;
+        document.getElementById('area').textContent = 'Area: ' + `${this.area()}`;
+        document.getElementById('perimeter').textContent = 'Perimeter: ' + `${this.perimeter()}`;
+
     }
 };
 
@@ -43,16 +43,17 @@ class Rectangle extends Shape {
         super.describe();
     }
     area() {
-        super.area();
+        return this.height * this.width
     }
     perimeter() {
-        super.perimeter();
+        return (this.height + this.width) * 2
     }
 };
 
 class Square extends Shape {
     constructor(height, width) {
         super(height, width)
+        this.radius = null;
         this.name = 'Square';
         this.div.id = 'SquareShape';
         this.div.style.backgroundColor = 'red';
@@ -62,16 +63,16 @@ class Square extends Shape {
         super.describe();
     }
     area() {
-        super.area();
+        return this.height * this.width
     }
     perimeter() {
-        super.perimeter
+        return (this.height + this.width) * 2
     }
 };
 
 class Circle extends Shape {
     constructor(radius) {
-        super(radius*2, radius*2);
+        super(radius * 2, radius * 2);
         this.name = 'Circle';
         this.div.id = 'CircleShape';
         this.div.style.backgroundColor = 'purple';
@@ -82,7 +83,7 @@ class Circle extends Shape {
         super.describe();
     }
     area() {
-        return Math.PI * this.radius * this.radius 
+        return Math.PI * this.radius * this.radius
     }
     perimeter() {
         return 2 * Math.PI * this.radius
@@ -92,6 +93,7 @@ class Circle extends Shape {
 class Triangle extends Shape {
     constructor(height) {
         super(height, height);
+        this.radius = null;
         this.name = 'Triangle';
         this.div.id = 'TriangleShape';
         this.div.style.width = 0;
