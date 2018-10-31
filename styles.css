@@ -1,0 +1,18 @@
+#shapeCont {
+    height: 600px;
+    width: 600px;
+    background-color: lightgrey;
+    margin: 10px;
+};
+
+#sidepanel {
+    background-color: lightgreen;
+    right: 0;
+    position: fixed;
+    height: 300px;
+    width: 300px;
+};
+
+.CircleShape {
+    border-radius: 100%;
+};
