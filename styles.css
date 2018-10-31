@@ -3,7 +3,7 @@
     width: 600px;
     background-color: lightgrey;
     margin: 10px;
-};
+}
 
 #sidepanel {
     background-color: lightgreen;
@@ -11,8 +11,15 @@
     position: fixed;
     height: 300px;
     width: 300px;
-};
+}
 
-.CircleShape {
+#CircleShape {
     border-radius: 100%;
-};
+}
+
+#TriangleShape {
+    height: 0;
+    width: 0;
+    border-bottom: solid yellow;
+    border-right: solid transparent;
+}
